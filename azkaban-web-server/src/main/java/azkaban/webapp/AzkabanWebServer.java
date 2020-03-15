@@ -712,6 +712,7 @@ public class AzkabanWebServer extends AzkabanServer implements IMBeanRegistrable
     this.mbeanRegistrationManager.closeMBeans();
     this.scheduleManager.shutdown();
     this.executorManagerAdapter.shutdown();
+    this.triggerManager.shutdown();
     try {
       this.azkabanDataSource.close();
       this.server.stop();
